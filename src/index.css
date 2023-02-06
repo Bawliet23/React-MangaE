@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "FiraSans";
+  src: local("FiraSans"), url(./assets/fonts/fira/FiraSans-Regular.ttf) format("truetype");
+}
+*{
+  font-family: "FiraSans";
+  scroll-behavior: smooth;}
+body{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "FiraSans";
+    background-color: #1a1a1a;
+     margin: 0 ; 
+     color: #f1f1f1;
+
+}
+html, body { height: 100%; }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF004D;
+  }
+  

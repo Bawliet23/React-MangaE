@@ -1,0 +1,53 @@
+.bestfive{
+    /* width: 100%; */
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px 0;
+    background-color: #222;
+}
+
+.topfive{
+    display: flex;
+    flex-direction: column;
+}.datetop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #333;
+    margin: 15px;
+    border-radius: 5px;
+}
+.sel{   
+    margin: 5px;
+    max-height: 40px;
+    flex: 1;
+    display: flex;
+    max-width: 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    transition: 300ms;
+}
+.sel:hover{
+    color: #ff004c;
+    transition: 300ms;
+}
+.select{
+    margin: 5px;
+    max-height: 40px;
+    flex: 1;
+    display: flex;
+    max-width: 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    transition: 300ms;
+    background-color: #ff004c;
+}
+
