@@ -65,7 +65,7 @@ align-items: center;
 
 }
 
-.btn{
+.btn12{
     background-color: #FF004D;
     border: 0;
     width: 150px;
@@ -76,7 +76,7 @@ align-items: center;
     font-weight: 600;
     transition: 500ms;
 }
-.btn:hover{
+.btn12:hover{
     box-shadow: 1px 3px 10px  #ff004d;
     transition: 500ms;
     transform: scale(1.1);

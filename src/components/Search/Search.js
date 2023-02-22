@@ -1,27 +1,63 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import './search.css'
-import SearchIcon from '@mui/icons-material/Search';
+import { BsSearch } from "react-icons/bs";
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 function Search() {
 
-   let res = [];
+  const [name, setName] = useState('');
+  const [search , setSearch ] = useState([])
+  const [show , setShow ] = useState(false)
+  useEffect(() => {
+      axios.get('http://localhost:3000/manga/search/'+name)
+.then(function (response) { 
+  setSearch(response.data);
+})
+.catch(function (error) {
+  console.log(error);
+})
+    },[name]);
+   
+
+
+   function handleChange(event) {
+    event.preventDefault();
+    setShow(true) ;
+    setName(event.target.value);
+    if(event.target.value.length === 0){
+      setSearch([])
+    }
+  }
+  function dispear(){
+    setName("")
+    
+   setShow(false) ;
+  }
+
+  const navigate = useNavigate();
+  const go = (id)=>{
+  navigate("/manga",{state: {
+      id
+  }})
+  }
 
   return (
-        <div  className="bigger">
+        <div  onBlur={dispear} className="bigger">
       <div className="med">
     <div className='bigInput'>
-        <div className='divIcon'>
-        {/* <span  ><SearchIcon /></span> */}
-        </div>
-        <input   className='searchInp' type="text" placeholder='Search Manga' />
+        {/* <div className='divIconS'>
+        <BsSearch />
+        </div> */}
+        <input   className='searchInp' type="text"  value={name} onChange={handleChange} placeholder='Search Manga' />
     </div>
     </div>
-    <div   className="aff">
-        {res.map(manga => 
-        <div className="pos2" >
-              <img src={manga.cover} alt={manga.name} className="cv" />
+    <div    className="affS">
+        {show && search.map(manga => 
+        <div  onMouseDown={()=>go(manga._id)} className="pos2" >
+              <img src={"http://localhost:3000/images/manga/"+manga.cover} alt={manga.name} className="cv" />
             <div className="info">
-              <h2 className="title">{manga.name}</h2>
-              <p className="genres"><span className="gn">Genres : </span>Action, Adventure, Fantasy, Magic, Returner, Shounen</p>
+              <h2 className="titleS">{manga.title}</h2>
+              <p className="genresS"><span className="gn">Genres : </span>Action, Adventure, Fantasy, Magic, Returner, Shounen</p>
             </div>
       </div>
         )}

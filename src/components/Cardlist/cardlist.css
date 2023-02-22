@@ -46,16 +46,16 @@
     justify-content: center;
     margin-left:5px;
 }
-.title{
-    font-size: .98em;
-    line-height: 1.4em;
+.titleC{
+    font-size: .8em;
+    line-height: 1em;
     font-weight: 500;
     padding: 0;
-    margin: 0;
+    margin: 20px 10px 0 0px ;
     transition: 300ms;
 
 }
-.title:hover{
+.titleC:hover{
     transition: 300ms;
     color: #ff004d;  
 }

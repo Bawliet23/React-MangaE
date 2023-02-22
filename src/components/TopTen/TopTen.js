@@ -1,32 +1,23 @@
-import React from 'react'
+import React ,{useState , useEffect}from 'react'
 import Cardlist from '../Cardlist/Cardlist'
+import axios from 'axios'
 import './topten.css'
 function TopTen() {
-    let manga = [{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    },{
-        name:"Solo leveling",
-        cover:"https://m.media-amazon.com/images/I/51Hv4zSmWTL._AC_SY780_.jpg"
-    }]
+    const [mangas, setMangas] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    useEffect(() => {
+        axios.get('http://localhost:3000/manga/?limit=10')
+  .then(function (response) {
+    // console.clear()
+    console.log(response.data)
+    
+    setMangas(response.data.mangas)
+    console.log(mangas);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+      },[]);
     let wk=true
     
     let mt=false
@@ -40,8 +31,8 @@ function TopTen() {
         <div className={`${all ? "select": "sel"}`}>All</div>
     </div>
 
-    <div class="topfive">
-       <TopFIve mangas={manga} />
+    <div className="topfive">
+       <TopFIve mangas={mangas} />
           
     </div>
 </div>

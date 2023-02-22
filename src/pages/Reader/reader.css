@@ -1,15 +1,15 @@
-.bigger{
+.biggerR{
     margin: 0 auto;
     max-width: 1220px;
     width: 100%;
 }
-.contread{
+.contreadR{
     margin-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.title{
+.titleR{
     text-align: center;
     margin: 0;
     font-size: 21px;
@@ -17,17 +17,17 @@
     color: #ddd;
     letter-spacing: 1px;
 }
-.dr{
+.drR{
     display: flex;
     flex-direction: row; 
     justify-content: space-between;
 }
-.btns{
+.btnsR{
     display: flex;
     flex-direction: row;
     
 }
-.btn{
+.btnR{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,16 +39,16 @@
     border-radius:15px;
     transition: 300ms;
 }
-.btn:hover{
+.btnR:hover{
     background-color: #333;
     transition: 300ms;
 }
 
-.btnD{
+.btnDR{
     background-color: #333;
     cursor: context-menu; 
 }
-select {
+select{
     -webkit-appearance:none;
     -moz-appearance:none;
     -ms-appearance:none;
@@ -68,7 +68,7 @@ select {
  select::-ms-expand {
     display: none;
  }
- .select {
+ .selectR{
     position: relative;
     display: flex;
     width: 20em;
@@ -78,7 +78,7 @@ select {
     overflow: hidden;
     border-radius: .25em;
  }
- .select::after {
+ .selectR::after {
     content: '\25BC';
     position: absolute;
     top: 0;
@@ -89,10 +89,10 @@ select {
     pointer-events:none;
     transition:.25s all ease;
  }
- .select:hover::after {
+ .selectR:hover::after {
     color: #690d0d;
  }
- .mangachap{
+ .mangachapR{
      display: flex;
      justify-content: center;
      align-items: center;

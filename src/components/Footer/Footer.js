@@ -14,7 +14,7 @@ function Footer() {
     <div className="bottom" >
         <img className="logo" src={logo}  alt="logo" />  
         <div className="contact">
-            <span className="txt" >Any business-related queries or advertising, please contact us at<b> mohamedbhajy23@gmail.com</b></span>
+            <span className="txt" >Any business-related queries or advertising, please contact us at<b> EmsiG5@gmail.com</b></span>
         </div>
     </div>
 </footer>

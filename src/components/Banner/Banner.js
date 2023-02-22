@@ -14,7 +14,7 @@ function Banner() {
             <h1 className="titleB">Martial God Asura</h1>
         </div>
         <div className="right" >
-            <button className="btn" >Read Me</button>
+            <button className="btn12" >Read Me</button>
         </div>
     </div>
 </div>
